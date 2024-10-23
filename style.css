@@ -1,0 +1,81 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    height: 100vh;
+    justify-content: center;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.mode-select {
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.tic-tac-toe {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 5px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cell.x::before {
+    content: 'X';
+    color: #d32f2f;
+    font-size: 2.5em;
+    position: absolute;
+}
+
+.cell.o::before {
+    content: 'O';
+    color: #1976d2;
+    font-size: 2.5em;
+}
+
+.cell {
+    cursor: default;
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+}
+
+.status {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #333;
+    font-weight: bold;
+}
